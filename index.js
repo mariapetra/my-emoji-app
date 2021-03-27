@@ -46,7 +46,6 @@ const popBtn = document.getElementById("pop-btn")
     function handlePopBtn() {
         const emojiInput = document.getElementById("emoji-input")
             {myEmojis.pop(emojiInput.value)
-            emojiInput.value = ""
             newEmojis()
         }  
     }
@@ -57,7 +56,6 @@ const shiftBtn = document.getElementById("shift-btn")
     function handleShiftBtn() {   
         const emojiInput = document.getElementById("emoji-input")   
             { myEmojis.shift(emojiInput.value)
-            emojiInput.value = ""           
             newEmojis()
         }
     }
