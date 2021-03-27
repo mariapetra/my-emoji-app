@@ -3,14 +3,17 @@
 const myEmojis = ["🧑‍💻", "🧘", "📷"]
 const emojiContainer = document.getElementById("emoji-container")
 
-for (let i = 0; i < myEmojis.length; i++) {
+function newEmojis() {
+    for (let i = 0; i < myEmojis.length; i++) {
         // console.log(myEmojis[i])
     const reneredEmojis = document.createElement("span")
     reneredEmojis.textContent = myEmojis[i]
     emojiContainer.append(reneredEmojis)
     
 }
+}
 
+newEmojis()
 // Hook an event listener up with the button, and log out the input field's value when it's clicked
 
 
@@ -21,6 +24,8 @@ function handleButtonClick() {
     if (emojiInput.value) {
         myEmojis.push(emojiInput.value)
         emojiInput.value = ""
+        emojiContainer.innerHTML = ""
+        newEmojis()
     }
     
 
