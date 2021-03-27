@@ -19,18 +19,26 @@ newEmojis()
 
 const btnClick = document.getElementById("push-btn")
 
-function handleButtonClick() {
-    const emojiInput = document.getElementById("emoji-input")
-    if (emojiInput.value) {
-        myEmojis.push(emojiInput.value)
-        emojiInput.value = ""
-        emojiContainer.innerHTML = ""
-        newEmojis()
-    }
-    
-
+    function handleButtonClick() {
+        const emojiInput = document.getElementById("emoji-input")
+            if (emojiInput.value) {
+            myEmojis.push(emojiInput.value)
+            emojiInput.value = ""
+            emojiContainer.innerHTML = ""
+            newEmojis()
+    }  
 }
+    btnClick.addEventListener("click", handleButtonClick) 
 
-btnClick.addEventListener("click", handleButtonClick) 
-
-
+const unshiftBtn = document.getElementById("unshift-btn")
+    
+    function handleUnshiftBtnClick() {   
+        const emojiInput = document.getElementById("emoji-input")   
+            if (emojiInput.value) {
+            myEmojis.unshift(emojiInput.value)
+            emojiInput.value = ""
+            emojiContainer.innerHTML = ""
+            newEmojis()
+        }
+    }
+    unshiftBtn.addEventListener("click", handleUnshiftBtnClick) 
